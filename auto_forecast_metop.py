@@ -232,8 +232,10 @@ def fuse_metop_ascat_nrt(sel_times, u_in, v_in, obs_mask, lat, lon):
                         s_lon = np.where(s_lon > 180, s_lon - 360.0, s_lon)
                         wspd = ds_sw["wind_speed"].values.ravel()
                         wdir = ds_sw["wind_dir"].values.ravel()
+                        wdir_std = str(ds_sw["wind_dir"].attrs.get("standard_name", "")).lower()
                         qflag = ds_sw["wvc_quality_flag"].values.ravel() if "wvc_quality_flag" in ds_sw else np.zeros_like(wspd)
                         t_sw = pd.to_datetime(prod.sensing_start).tz_localize(None)
+                       
 
                     # Tìm khung 12h gần nhất trong cửa sổ 6 ngày
                     diffs_h = np.abs((sel_times - t_sw).total_seconds() / 3600.0)
@@ -252,8 +254,9 @@ def fuse_metop_ascat_nrt(sel_times, u_in, v_in, obs_mask, lat, lon):
                     iy = np.clip(np.round((s_lat[valid] - lat_min) / dlat).astype(int), 0, len(lat) - 1)
                     ix = np.clip(np.round((s_lon[valid] - lon_min) / dlon).astype(int), 0, len(lon) - 1)
                     rad = np.deg2rad(wdir[valid])
-                    u_sat = -wspd[valid] * np.sin(rad)
-                    v_sat = -wspd[valid] * np.cos(rad)
+                    sign = -1.0 if "from" in wdir_std else 1.0
+                    u_sat = sign * wspd[valid] * np.sin(rad)
+                    v_sat = sign * wspd[valid] * np.cos(rad)
 
                     u_in[t_idx, iy, ix] = u_sat
                     v_in[t_idx, iy, ix] = v_sat
