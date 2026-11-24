@@ -1,0 +1,39 @@
+name: Auto Forecast Bien Dong (MetOp + DA-DSC-UNet)
+
+on:
+  schedule:
+    - cron: "0 2,14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-forecast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --no-cache-dir numpy pandas scipy requests matplotlib xarray netCDF4 "eumdac<4.0"
+
+      - name: Run 48h forecast
+        env:
+          EUMETSAT_KEY: ${{ secrets.EUMETSAT_KEY }}
+          EUMETSAT_SECRET: ${{ secrets.EUMETSAT_SECRET }}
+        run: python -u auto_forecast_metop.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "KLTN-Forecast-Bot"
+          git config user.email "bot@kltn-scs-wind.local"
+          git add docs/data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update 48h SCS forecast" && git push)
