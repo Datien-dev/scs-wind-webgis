@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCS Wind Earth — WebGIS Dự báo Gió Biển Đông 24/7 (DA-DSC-UNet)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    html, body, #map { width: 100%; height: 100%; background: #0b132b; overflow: hidden; }
+    .glass {
+      background: rgba(15, 23, 42, 0.80); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.14); color: #f1f5f9; border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    }
+    #sidebar { position: absolute; top: 16px; left: 16px; width: 250px; z-index: 1000; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+    .brand { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 10px; }
+    .brand-icon { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #38bdf8, #6366f1); display: grid; place-items: center; font-size: 17px; }
+    .brand h1 { font-size: 15px; line-height: 1.2; }
+    .brand span { font-size: 11px; color: #94a3b8; }
+    .sec-title { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-top: 4px; }
+    .btn-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 9px; cursor: pointer; font-size: 13px; background: rgba(255,255,255,0.05); border: 1px solid transparent; transition: 0.2s; }
+    .btn-row:hover { background: rgba(255,255,255,0.12); }
+    .btn-row.active { background: rgba(56,189,248,0.22); border-color: rgba(56,189,248,0.6); font-weight: 600; }
+    .source-tag { font-size: 11px; color: #7dd3fc; background: rgba(56,189,248,0.12); padding: 6px 9px; border-radius: 8px; line-height: 1.4; }
+
+    #time-player { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000; padding: 12px 18px; width: 420px; max-width: 92vw; }
+    .player-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+    .ctrl-btn { background: rgba(255,255,255,0.12); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 13px; }
+    .ctrl-btn:hover { background: #38bdf8; color: #0f172a; }
+    .time-text { text-align: center; flex: 1; }
+    .time-text .main { font-size: 15px; font-weight: 700; }
+    .time-text .sub { font-size: 11px; color: #38bdf8; }
+    #time-slider { width: 100%; accent-color: #38bdf8; cursor: pointer; }
+
+    #legend-box { position: absolute; bottom: 24px; left: 16px; z-index: 1000; padding: 10px 14px; width: 265px; }
+    .colorbar { height: 10px; border-radius: 5px; margin: 6px 0 4px 0; background: linear-gradient(90deg, #4b2e83 0%, #3b528b 16%, #21918c 32%, #5ec962 48%, #fde725 64%, #f89540 78%, #cc4778 90%, #900c3f 100%); }
+    .bar-labels { display: flex; justify-content: space-between; font-size: 10.5px; color: #cbd5e1; }
+    #coords { font-size: 11px; color: #94a3b8; margin-top: 6px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px; }
+
+    .station-pill { background: rgba(255,255,255,0.92); color: #0f172a; border-radius: 14px; padding: 2px 7px; font-size: 11px; font-weight: 700; white-space: nowrap; box-shadow: 0 2px 6px rgba(0,0,0,0.45); display: inline-flex; align-items: center; gap: 3px; }
+    .station-name { color: #fff; font-size: 11px; font-weight: 600; text-shadow: 0 1px 4px #000; text-align: center; margin-bottom: 2px; white-space: nowrap; }
+    @media (max-width: 900px) { #legend-box { display: none; } #sidebar { width: 210px; } }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="sidebar" class="glass">
+    <div class="brand">
+      <div class="brand-icon">🌊</div>
+      <div><h1>SCS WIND EARTH</h1><span>DA-DSC-UNet • Live 24/7</span></div>
+    </div>
+    <div class="source-tag" id="lbl-source">Nguồn: Đang tải...</div>
+    <div class="sec-title">Lớp bản đồ dự báo</div>
+    <div class="btn-row active" id="btn-heat" onclick="toggleLayer('heat')"><span>🎨 Trường tốc độ gió</span><span id="st-heat">ON</span></div>
+    <div class="btn-row active" id="btn-vel" onclick="toggleLayer('vel')"><span>💨 Dòng hạt gió động</span><span id="st-vel">ON</span></div>
+    <div class="btn-row active" id="btn-sta" onclick="toggleLayer('sta')"><span>📍 Nhãn Trạm & Đảo</span><span id="st-sta">ON</span></div>
+    <div class="sec-title">Nền bản đồ</div>
+    <div class="btn-row active" id="btn-dark" onclick="switchBasemap('dark')"><span>🗺️ Nền tối Esri Dark</span></div>
+    <div class="btn-row" id="btn-sat" onclick="switchBasemap('sat')"><span>🛰️ Ảnh vệ tinh Esri</span></div>
+    <div style="font-size:11px; color:#94a3b8; margin-top:2px;">💡 Click bất kỳ điểm nào trên Biển Đông để xem gió chi tiết tại pixel đó.</div>
+  </div>
+
+  <div id="time-player" class="glass">
+    <div class="player-top">
+      <button class="ctrl-btn" onclick="stepTime(-1)">◀</button>
+      <button class="ctrl-btn" id="btn-play" onclick="togglePlay()">▶</button>
+      <button class="ctrl-btn" onclick="stepTime(1)">▶|</button>
+      <div class="time-text">
+        <div class="main" id="lbl-date">Đang tải dữ liệu...</div>
+        <div class="sub" id="lbl-lead">Phát lệnh t0: --</div>
+      </div>
+    </div>
+    <input type="range" id="time-slider" min="0" max="16" value="0" step="1" oninput="renderStep(parseInt(this.value))" />
+  </div>
+
+  <div id="legend-box" class="glass">
+    <div style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:600;">
+      <span>Tốc độ gió 10m (m/s)</span>
+      <span id="lbl-max" style="color:#fde725;">Max: -- m/s</span>
+    </div>
+    <div class="colorbar"></div>
+    <div class="bar-labels"><span>0</span><span>3</span><span>6</span><span>9</span><span>12</span><span>15</span><span>18+</span></div>
+    <div id="coords">Di chuột lên Biển Đông để xem tọa độ...</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js"></script>
+  <script>
+    const map = L.map("map", { center: [14.0, 110.5], zoom: 6, zoomControl: false });
+    L.control.zoom({ position: "bottomright" }).addTo(map);
+
+    const baseDark = L.layerGroup([
+      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", { attribution: "Esri • KLTN" }),
+      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}")
+    ]).addTo(map);
+    const baseSat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "Esri World Imagery" });
+
+    let manifest = null, currentIdx = 0, playTimer = null, currentVelData = null;
+    let heatLayer = null, velocityLayer = null;
+    const stationGroup = L.layerGroup().addTo(map);
+    const state = { heat: true, vel: true, sta: true };
+
+    function toBeaufort(w) {
+      const th = [0.3, 1.6, 3.4, 5.5, 8.0, 10.8, 13.9, 17.2, 20.8, 24.5, 28.5, 32.7];
+      for (let i = 0; i < th.length; i++) if (w < th[i]) return i;
+      return 12;
+    }
+
+    map.on("mousemove", e => {
+      document.getElementById("coords").innerText = `Tọa độ: ${e.latlng.lat.toFixed(2)}°N, ${e.latlng.lng.toFixed(2)}°E`;
+    });
+
+    // Click bất kỳ pixel nào trên Biển Đông để tra cứu tốc độ & hướng gió tại đúng thời điểm đang chọn
+    map.on("click", e => {
+      if (!currentVelData) return;
+      const h = currentVelData[0].header;
+      const ix = Math.round((e.latlng.lng - h.lo1) / h.dx);
+      const iy = Math.round((h.la1 - e.latlng.lat) / h.dy);
+      if (ix < 0 || ix >= h.nx || iy < 0 || iy >= h.ny) return;
+      const idx = iy * h.nx + ix;
+      const u = currentVelData[0].data[idx], v = currentVelData[1].data[idx];
+      const w = Math.hypot(u, v);
+      if (w < 0.05) return;
+      const dir = ((Math.atan2(u, v) * 180 / Math.PI) + 360) % 360;
+      const step = manifest.steps[currentIdx];
+      L.popup().setLatLng(e.latlng).setContent(
+        `<b>Thời điểm: ${step.label_vn} (+${step.lead_h}h)</b><br>` +
+        `Tọa độ: ${e.latlng.lat.toFixed(2)}°N, ${e.latlng.lng.toFixed(2)}°E<br>` +
+        `Tốc độ gió: <b>${w.toFixed(2)} m/s</b> (${(w * 3.6).toFixed(1)} km/h — <b>Cấp ${toBeaufort(w)}</b>)<br>` +
+        `Hướng thổi tới: ${dir.toFixed(0)}°`
+      ).openOn(map);
+    });
+
+    function switchBasemap(type) {
+      document.getElementById("btn-dark").classList.toggle("active", type === "dark");
+      document.getElementById("btn-sat").classList.toggle("active", type === "sat");
+      if (type === "sat") { map.removeLayer(baseDark); baseSat.addTo(map); }
+      else { map.removeLayer(baseSat); baseDark.addTo(map); }
+    }
+
+    function toggleLayer(key) {
+      state[key] = !state[key];
+      document.getElementById("st-" + key).innerText = state[key] ? "ON" : "OFF";
+      document.getElementById("btn-" + key).classList.toggle("active", state[key]);
+      if (key === "heat" && heatLayer) state.heat ? heatLayer.addTo(map) : map.removeLayer(heatLayer);
+      if (key === "vel" && velocityLayer) state.vel ? velocityLayer.addTo(map) : map.removeLayer(velocityLayer);
+      if (key === "sta") state.sta ? stationGroup.addTo(map) : map.removeLayer(stationGroup);
+    }
+
+    async function renderStep(idx) {
+      if (!manifest) return;
+      currentIdx = (idx + manifest.steps.length) % manifest.steps.length;
+      document.getElementById("time-slider").value = currentIdx;
+      const step = manifest.steps[currentIdx];
+
+      document.getElementById("lbl-date").innerText = step.label_vn;
+      document.getElementById("lbl-lead").innerText = `Hạn +${step.lead_h}h (${step.is_anchor ? "Mốc mô hình 12h" : "Nội suy PCHIP 3h"}) • t0: ${manifest.t0_utc}`;
+      document.getElementById("lbl-max").innerText = `Cực đại: ${step.max_wind_ms} m/s`;
+
+      if (heatLayer) map.removeLayer(heatLayer);
+      heatLayer = L.imageOverlay(step.heatmap_png + "?v=" + Date.now(), manifest.bounds, { opacity: 0.80 });
+      if (state.heat) heatLayer.addTo(map);
+
+      const res = await fetch(step.velocity_json);
+      currentVelData = await res.json();
+      if (velocityLayer) map.removeLayer(velocityLayer);
+      velocityLayer = L.velocityLayer({
+        displayValues: true,
+        displayOptions: { velocityType: "Gió mặt biển", position: "topright", emptyString: "Ngoài vùng Biển Đông", speedUnit: "m/s" },
+        data: currentVelData, maxVelocity: 18, velocityScale: 0.012, particleAge: 65, lineWidth: 1.5,
+        colorScale: ["#ffffff", "#e0f2fe", "#7dd3fc", "#fde047", "#fb923c"]
+      });
+      if (state.vel) velocityLayer.addTo(map);
+
+      stationGroup.clearLayers();
+      step.stations.forEach(s => {
+        const icon = L.divIcon({
+          className: "",
+          html: `<div style="transform:translate(-50%,-50%)"><div class="station-name">${s.name}</div><div class="station-pill">${s.w_ms} m/s <span style="display:inline-block;transform:rotate(${s.dir_deg}deg)">↑</span></div></div>`
+        });
+        L.marker([s.lat, s.lon], { icon }).addTo(stationGroup);
+      });
+    }
+
+    function stepTime(d) { renderStep(currentIdx + d); }
+    function togglePlay() {
+      const btn = document.getElementById("btn-play");
+      if (playTimer) { clearInterval(playTimer); playTimer = null; btn.innerText = "▶"; }
+      else { btn.innerText = "⏸"; playTimer = setInterval(() => stepTime(1), 1500); }
+    }
+
+    fetch("data/manifest.json?v=" + Date.now()).then(r => r.json()).then(m => {
+      manifest = m;
+      document.getElementById("time-slider").max = m.steps.length - 1;
+      document.getElementById("lbl-source").innerText = `📡 ${m.data_source}\n🕒 Cập nhật: ${m.updated_utc}`;
+      renderStep(0);
+    });
+  </script>
+</body>
+</html>
