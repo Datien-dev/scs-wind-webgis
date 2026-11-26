@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-26 10:16 UTC",
-  "t0_utc": "2026-11-26 00:00 UTC",
-  "data_source": "MetOp-B/C ASCAT NRT (16,368 pts) + ECMWF IFS",
+  "updated_utc": "2026-11-26 22:43 UTC",
+  "t0_utc": "2026-11-26 12:00 UTC",
+  "data_source": "MetOp-B/C ASCAT NRT (14,498 pts) + ECMWF IFS",
   "bounds": [
     [
       5.0,
@@ -15,1140 +15,1140 @@
   "steps": [
     {
       "lead_h": 0,
-      "label_vn": "26/11 07:00 (VN)",
-      "label_utc": "26 Nov 00:00 UTC",
+      "label_vn": "26/11 19:00 (VN)",
+      "label_utc": "26 Nov 12:00 UTC",
       "is_anchor": true,
       "heatmap_png": "data/wind_0h.png",
       "velocity_json": "data/velocity_0h.json",
-      "max_wind_ms": 12.1,
+      "max_wind_ms": 11.4,
       "stations": [
         {
           "name": "Bạch Long Vĩ",
           "lat": 20.13,
           "lon": 107.72,
-          "w_ms": 5.5,
-          "dir_deg": 201.0
+          "w_ms": 3.6,
+          "dir_deg": 234.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 9.9,
+          "w_ms": 10.0,
           "dir_deg": 235.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 3.9,
-          "dir_deg": 179.0
+          "w_ms": 3.1,
+          "dir_deg": 191.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 7.5,
-          "dir_deg": 212.0
+          "w_ms": 6.6,
+          "dir_deg": 230.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
-          "w_ms": 5.6,
-          "dir_deg": 254.0
+          "w_ms": 4.9,
+          "dir_deg": 266.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
-          "w_ms": 8.6,
-          "dir_deg": 235.0
+          "w_ms": 6.0,
+          "dir_deg": 241.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
-          "w_ms": 2.9,
-          "dir_deg": 191.0
+          "w_ms": 1.5,
+          "dir_deg": 257.0
         },
         {
           "name": "TP. Hồ Chí Minh",
           "lat": 10.77,
           "lon": 106.7,
-          "w_ms": 2.2,
-          "dir_deg": 195.0
+          "w_ms": 1.5,
+          "dir_deg": 226.0
         }
       ]
     },
     {
       "lead_h": 3,
-      "label_vn": "26/11 10:00 (VN)",
-      "label_utc": "26 Nov 03:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_3h.png",
-      "velocity_json": "data/velocity_3h.json",
-      "max_wind_ms": 11.0,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.2,
-          "dir_deg": 206.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 9.6,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.0,
-          "dir_deg": 182.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 7.4,
-          "dir_deg": 213.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 4.7,
-          "dir_deg": 261.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 8.2,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 2.9,
-          "dir_deg": 195.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 2.4,
-          "dir_deg": 201.0
-        }
-      ]
-    },
-    {
-      "lead_h": 6,
-      "label_vn": "26/11 13:00 (VN)",
-      "label_utc": "26 Nov 06:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_6h.png",
-      "velocity_json": "data/velocity_6h.json",
-      "max_wind_ms": 10.8,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.0,
-          "dir_deg": 210.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 9.3,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.1,
-          "dir_deg": 185.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 7.2,
-          "dir_deg": 214.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 4.0,
-          "dir_deg": 270.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 7.8,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 2.8,
-          "dir_deg": 199.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 2.6,
-          "dir_deg": 206.0
-        }
-      ]
-    },
-    {
-      "lead_h": 9,
-      "label_vn": "26/11 16:00 (VN)",
-      "label_utc": "26 Nov 09:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_9h.png",
-      "velocity_json": "data/velocity_9h.json",
-      "max_wind_ms": 10.6,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 4.9,
-          "dir_deg": 215.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 9.0,
-          "dir_deg": 236.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.1,
-          "dir_deg": 188.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 7.1,
-          "dir_deg": 215.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 3.6,
-          "dir_deg": 281.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 7.4,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 2.9,
-          "dir_deg": 203.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 2.8,
-          "dir_deg": 210.0
-        }
-      ]
-    },
-    {
-      "lead_h": 12,
-      "label_vn": "26/11 19:00 (VN)",
-      "label_utc": "26 Nov 12:00 UTC",
-      "is_anchor": true,
-      "heatmap_png": "data/wind_12h.png",
-      "velocity_json": "data/velocity_12h.json",
-      "max_wind_ms": 10.4,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 4.9,
-          "dir_deg": 218.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 8.7,
-          "dir_deg": 237.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.2,
-          "dir_deg": 192.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 7.0,
-          "dir_deg": 216.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 3.2,
-          "dir_deg": 291.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 7.0,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 3.0,
-          "dir_deg": 207.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 3.0,
-          "dir_deg": 214.0
-        }
-      ]
-    },
-    {
-      "lead_h": 15,
       "label_vn": "26/11 22:00 (VN)",
       "label_utc": "26 Nov 15:00 UTC",
       "is_anchor": false,
-      "heatmap_png": "data/wind_15h.png",
-      "velocity_json": "data/velocity_15h.json",
-      "max_wind_ms": 10.4,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 4.9,
-          "dir_deg": 222.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 8.5,
-          "dir_deg": 237.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.2,
-          "dir_deg": 196.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 6.8,
-          "dir_deg": 217.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 3.1,
-          "dir_deg": 300.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 6.7,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 3.1,
-          "dir_deg": 211.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 3.3,
-          "dir_deg": 217.0
-        }
-      ]
-    },
-    {
-      "lead_h": 18,
-      "label_vn": "27/11 01:00 (VN)",
-      "label_utc": "26 Nov 18:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_18h.png",
-      "velocity_json": "data/velocity_18h.json",
-      "max_wind_ms": 10.5,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.0,
-          "dir_deg": 225.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 8.2,
-          "dir_deg": 238.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.3,
-          "dir_deg": 201.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 6.7,
-          "dir_deg": 218.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 3.0,
-          "dir_deg": 309.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 6.5,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 3.3,
-          "dir_deg": 215.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 3.6,
-          "dir_deg": 220.0
-        }
-      ]
-    },
-    {
-      "lead_h": 21,
-      "label_vn": "27/11 04:00 (VN)",
-      "label_utc": "26 Nov 21:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_21h.png",
-      "velocity_json": "data/velocity_21h.json",
+      "heatmap_png": "data/wind_3h.png",
+      "velocity_json": "data/velocity_3h.json",
       "max_wind_ms": 10.7,
       "stations": [
         {
           "name": "Bạch Long Vĩ",
           "lat": 20.13,
           "lon": 107.72,
-          "w_ms": 5.1,
-          "dir_deg": 227.0
+          "w_ms": 3.6,
+          "dir_deg": 236.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 8.0,
-          "dir_deg": 239.0
+          "w_ms": 9.5,
+          "dir_deg": 237.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 4.4,
-          "dir_deg": 205.0
+          "w_ms": 2.9,
+          "dir_deg": 195.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 6.5,
-          "dir_deg": 219.0
+          "w_ms": 6.2,
+          "dir_deg": 231.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
-          "w_ms": 3.0,
-          "dir_deg": 317.0
+          "w_ms": 4.4,
+          "dir_deg": 268.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
-          "w_ms": 6.2,
-          "dir_deg": 235.0
+          "w_ms": 5.7,
+          "dir_deg": 240.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
-          "w_ms": 3.6,
-          "dir_deg": 218.0
+          "w_ms": 1.6,
+          "dir_deg": 252.0
         },
         {
           "name": "TP. Hồ Chí Minh",
           "lat": 10.77,
           "lon": 106.7,
-          "w_ms": 3.9,
-          "dir_deg": 222.0
+          "w_ms": 1.5,
+          "dir_deg": 231.0
         }
       ]
     },
     {
-      "lead_h": 24,
-      "label_vn": "27/11 07:00 (VN)",
-      "label_utc": "27 Nov 00:00 UTC",
-      "is_anchor": true,
-      "heatmap_png": "data/wind_24h.png",
-      "velocity_json": "data/velocity_24h.json",
-      "max_wind_ms": 10.9,
+      "lead_h": 6,
+      "label_vn": "27/11 01:00 (VN)",
+      "label_utc": "26 Nov 18:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_6h.png",
+      "velocity_json": "data/velocity_6h.json",
+      "max_wind_ms": 10.1,
       "stations": [
         {
           "name": "Bạch Long Vĩ",
           "lat": 20.13,
           "lon": 107.72,
-          "w_ms": 5.2,
-          "dir_deg": 229.0
+          "w_ms": 3.6,
+          "dir_deg": 237.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 7.7,
+          "w_ms": 9.0,
+          "dir_deg": 238.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 2.8,
+          "dir_deg": 200.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 5.9,
+          "dir_deg": 231.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 3.9,
+          "dir_deg": 269.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 5.5,
+          "dir_deg": 240.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 1.8,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 1.5,
+          "dir_deg": 236.0
+        }
+      ]
+    },
+    {
+      "lead_h": 9,
+      "label_vn": "27/11 04:00 (VN)",
+      "label_utc": "26 Nov 21:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_9h.png",
+      "velocity_json": "data/velocity_9h.json",
+      "max_wind_ms": 9.6,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 3.7,
+          "dir_deg": 239.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 8.6,
           "dir_deg": 240.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 4.5,
-          "dir_deg": 208.0
+          "w_ms": 2.8,
+          "dir_deg": 205.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 6.4,
-          "dir_deg": 219.0
+          "w_ms": 5.6,
+          "dir_deg": 231.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
-          "w_ms": 2.9,
-          "dir_deg": 324.0
+          "w_ms": 3.5,
+          "dir_deg": 270.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
-          "w_ms": 6.0,
-          "dir_deg": 235.0
+          "w_ms": 5.3,
+          "dir_deg": 240.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
-          "w_ms": 3.7,
-          "dir_deg": 220.0
+          "w_ms": 2.0,
+          "dir_deg": 245.0
         },
         {
           "name": "TP. Hồ Chí Minh",
           "lat": 10.77,
           "lon": 106.7,
-          "w_ms": 4.0,
-          "dir_deg": 224.0
+          "w_ms": 1.6,
+          "dir_deg": 240.0
         }
       ]
     },
     {
-      "lead_h": 27,
-      "label_vn": "27/11 10:00 (VN)",
-      "label_utc": "27 Nov 03:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_27h.png",
-      "velocity_json": "data/velocity_27h.json",
-      "max_wind_ms": 11.0,
+      "lead_h": 12,
+      "label_vn": "27/11 07:00 (VN)",
+      "label_utc": "27 Nov 00:00 UTC",
+      "is_anchor": true,
+      "heatmap_png": "data/wind_12h.png",
+      "velocity_json": "data/velocity_12h.json",
+      "max_wind_ms": 9.2,
       "stations": [
         {
           "name": "Bạch Long Vĩ",
           "lat": 20.13,
           "lon": 107.72,
-          "w_ms": 5.3,
-          "dir_deg": 231.0
+          "w_ms": 3.8,
+          "dir_deg": 240.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 7.4,
+          "w_ms": 8.3,
           "dir_deg": 241.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 4.5,
+          "w_ms": 2.7,
           "dir_deg": 211.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 6.2,
-          "dir_deg": 221.0
+          "w_ms": 5.4,
+          "dir_deg": 232.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
-          "w_ms": 2.9,
-          "dir_deg": 331.0
+          "w_ms": 3.2,
+          "dir_deg": 270.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
-          "w_ms": 5.7,
-          "dir_deg": 235.0
+          "w_ms": 5.2,
+          "dir_deg": 240.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
-          "w_ms": 3.9,
-          "dir_deg": 222.0
+          "w_ms": 2.2,
+          "dir_deg": 243.0
         },
         {
           "name": "TP. Hồ Chí Minh",
           "lat": 10.77,
           "lon": 106.7,
-          "w_ms": 4.2,
-          "dir_deg": 225.0
+          "w_ms": 1.6,
+          "dir_deg": 243.0
         }
       ]
     },
     {
-      "lead_h": 30,
-      "label_vn": "27/11 13:00 (VN)",
-      "label_utc": "27 Nov 06:00 UTC",
+      "lead_h": 15,
+      "label_vn": "27/11 10:00 (VN)",
+      "label_utc": "27 Nov 03:00 UTC",
       "is_anchor": false,
-      "heatmap_png": "data/wind_30h.png",
-      "velocity_json": "data/velocity_30h.json",
-      "max_wind_ms": 11.0,
+      "heatmap_png": "data/wind_15h.png",
+      "velocity_json": "data/velocity_15h.json",
+      "max_wind_ms": 8.8,
       "stations": [
         {
           "name": "Bạch Long Vĩ",
           "lat": 20.13,
           "lon": 107.72,
-          "w_ms": 5.4,
-          "dir_deg": 233.0
+          "w_ms": 3.9,
+          "dir_deg": 241.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 7.1,
+          "w_ms": 8.0,
           "dir_deg": 242.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 4.5,
-          "dir_deg": 214.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 6.0,
-          "dir_deg": 222.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 2.9,
-          "dir_deg": 337.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 5.4,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 4.0,
-          "dir_deg": 224.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 4.3,
-          "dir_deg": 227.0
-        }
-      ]
-    },
-    {
-      "lead_h": 33,
-      "label_vn": "27/11 16:00 (VN)",
-      "label_utc": "27 Nov 09:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_33h.png",
-      "velocity_json": "data/velocity_33h.json",
-      "max_wind_ms": 11.0,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.5,
-          "dir_deg": 235.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 6.8,
-          "dir_deg": 243.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.5,
-          "dir_deg": 216.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 5.9,
-          "dir_deg": 223.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 2.9,
-          "dir_deg": 343.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 5.1,
-          "dir_deg": 236.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 4.2,
-          "dir_deg": 225.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 4.3,
-          "dir_deg": 228.0
-        }
-      ]
-    },
-    {
-      "lead_h": 36,
-      "label_vn": "27/11 19:00 (VN)",
-      "label_utc": "27 Nov 12:00 UTC",
-      "is_anchor": true,
-      "heatmap_png": "data/wind_36h.png",
-      "velocity_json": "data/velocity_36h.json",
-      "max_wind_ms": 11.0,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.6,
-          "dir_deg": 236.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 6.5,
-          "dir_deg": 244.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.4,
+          "w_ms": 2.7,
           "dir_deg": 218.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 5.7,
-          "dir_deg": 224.0
+          "w_ms": 5.2,
+          "dir_deg": 232.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
-          "w_ms": 2.9,
-          "dir_deg": 345.0
+          "w_ms": 3.0,
+          "dir_deg": 270.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 5.0,
+          "dir_deg": 240.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 2.4,
+          "dir_deg": 241.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 1.8,
+          "dir_deg": 246.0
+        }
+      ]
+    },
+    {
+      "lead_h": 18,
+      "label_vn": "27/11 13:00 (VN)",
+      "label_utc": "27 Nov 06:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_18h.png",
+      "velocity_json": "data/velocity_18h.json",
+      "max_wind_ms": 8.5,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.0,
+          "dir_deg": 243.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 7.7,
+          "dir_deg": 243.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 2.8,
+          "dir_deg": 226.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 5.0,
+          "dir_deg": 233.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 2.8,
+          "dir_deg": 269.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
           "w_ms": 4.9,
-          "dir_deg": 236.0
+          "dir_deg": 240.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
+          "w_ms": 2.7,
+          "dir_deg": 240.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 1.9,
+          "dir_deg": 248.0
+        }
+      ]
+    },
+    {
+      "lead_h": 21,
+      "label_vn": "27/11 16:00 (VN)",
+      "label_utc": "27 Nov 09:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_21h.png",
+      "velocity_json": "data/velocity_21h.json",
+      "max_wind_ms": 8.4,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.1,
+          "dir_deg": 244.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 7.4,
+          "dir_deg": 244.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 2.9,
+          "dir_deg": 233.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 4.8,
+          "dir_deg": 233.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 2.7,
+          "dir_deg": 269.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 4.8,
+          "dir_deg": 240.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 2.9,
+          "dir_deg": 239.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.0,
+          "dir_deg": 249.0
+        }
+      ]
+    },
+    {
+      "lead_h": 24,
+      "label_vn": "27/11 19:00 (VN)",
+      "label_utc": "27 Nov 12:00 UTC",
+      "is_anchor": true,
+      "heatmap_png": "data/wind_24h.png",
+      "velocity_json": "data/velocity_24h.json",
+      "max_wind_ms": 8.3,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
           "w_ms": 4.2,
-          "dir_deg": 225.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 4.4,
-          "dir_deg": 228.0
-        }
-      ]
-    },
-    {
-      "lead_h": 39,
-      "label_vn": "27/11 22:00 (VN)",
-      "label_utc": "27 Nov 15:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_39h.png",
-      "velocity_json": "data/velocity_39h.json",
-      "max_wind_ms": 11.0,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.6,
-          "dir_deg": 236.0
+          "dir_deg": 245.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 6.3,
+          "w_ms": 7.2,
           "dir_deg": 245.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 4.3,
-          "dir_deg": 219.0
+          "w_ms": 3.0,
+          "dir_deg": 238.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 5.6,
-          "dir_deg": 225.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 2.8,
-          "dir_deg": 346.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
-          "w_ms": 4.7,
-          "dir_deg": 236.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 4.3,
-          "dir_deg": 225.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 4.4,
-          "dir_deg": 228.0
-        }
-      ]
-    },
-    {
-      "lead_h": 42,
-      "label_vn": "28/11 01:00 (VN)",
-      "label_utc": "27 Nov 18:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_42h.png",
-      "velocity_json": "data/velocity_42h.json",
-      "max_wind_ms": 10.9,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.6,
-          "dir_deg": 236.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 6.1,
-          "dir_deg": 245.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.3,
-          "dir_deg": 220.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 5.5,
-          "dir_deg": 226.0
-        },
-        {
-          "name": "Trường Sa",
-          "lat": 8.64,
-          "lon": 111.92,
-          "w_ms": 2.8,
-          "dir_deg": 346.0
-        },
-        {
-          "name": "Côn Đảo",
-          "lat": 8.68,
-          "lon": 106.6,
           "w_ms": 4.6,
-          "dir_deg": 237.0
-        },
-        {
-          "name": "Hải Phòng",
-          "lat": 20.85,
-          "lon": 106.68,
-          "w_ms": 4.3,
-          "dir_deg": 225.0
-        },
-        {
-          "name": "TP. Hồ Chí Minh",
-          "lat": 10.77,
-          "lon": 106.7,
-          "w_ms": 4.4,
-          "dir_deg": 228.0
-        }
-      ]
-    },
-    {
-      "lead_h": 45,
-      "label_vn": "28/11 04:00 (VN)",
-      "label_utc": "27 Nov 21:00 UTC",
-      "is_anchor": false,
-      "heatmap_png": "data/wind_45h.png",
-      "velocity_json": "data/velocity_45h.json",
-      "max_wind_ms": 10.9,
-      "stations": [
-        {
-          "name": "Bạch Long Vĩ",
-          "lat": 20.13,
-          "lon": 107.72,
-          "w_ms": 5.6,
-          "dir_deg": 236.0
-        },
-        {
-          "name": "Hoàng Sa",
-          "lat": 16.53,
-          "lon": 111.62,
-          "w_ms": 6.0,
-          "dir_deg": 246.0
-        },
-        {
-          "name": "Đà Nẵng",
-          "lat": 16.07,
-          "lon": 108.22,
-          "w_ms": 4.2,
-          "dir_deg": 220.0
-        },
-        {
-          "name": "Phú Quý",
-          "lat": 10.52,
-          "lon": 108.93,
-          "w_ms": 5.4,
-          "dir_deg": 226.0
+          "dir_deg": 234.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
           "w_ms": 2.6,
-          "dir_deg": 346.0
+          "dir_deg": 268.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
-          "w_ms": 4.5,
-          "dir_deg": 237.0
+          "w_ms": 4.7,
+          "dir_deg": 240.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
-          "w_ms": 4.3,
-          "dir_deg": 225.0
+          "w_ms": 3.1,
+          "dir_deg": 237.0
         },
         {
           "name": "TP. Hồ Chí Minh",
           "lat": 10.77,
           "lon": 106.7,
-          "w_ms": 4.4,
-          "dir_deg": 228.0
+          "w_ms": 2.1,
+          "dir_deg": 251.0
         }
       ]
     },
     {
-      "lead_h": 48,
-      "label_vn": "28/11 07:00 (VN)",
-      "label_utc": "28 Nov 00:00 UTC",
-      "is_anchor": true,
-      "heatmap_png": "data/wind_48h.png",
-      "velocity_json": "data/velocity_48h.json",
-      "max_wind_ms": 10.8,
+      "lead_h": 27,
+      "label_vn": "27/11 22:00 (VN)",
+      "label_utc": "27 Nov 15:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_27h.png",
+      "velocity_json": "data/velocity_27h.json",
+      "max_wind_ms": 8.2,
       "stations": [
         {
           "name": "Bạch Long Vĩ",
           "lat": 20.13,
           "lon": 107.72,
-          "w_ms": 5.6,
-          "dir_deg": 236.0
+          "w_ms": 4.3,
+          "dir_deg": 245.0
         },
         {
           "name": "Hoàng Sa",
           "lat": 16.53,
           "lon": 111.62,
-          "w_ms": 5.9,
+          "w_ms": 6.8,
           "dir_deg": 246.0
         },
         {
           "name": "Đà Nẵng",
           "lat": 16.07,
           "lon": 108.22,
-          "w_ms": 4.1,
-          "dir_deg": 221.0
+          "w_ms": 3.1,
+          "dir_deg": 243.0
         },
         {
           "name": "Phú Quý",
           "lat": 10.52,
           "lon": 108.93,
-          "w_ms": 5.4,
-          "dir_deg": 227.0
+          "w_ms": 4.4,
+          "dir_deg": 234.0
         },
         {
           "name": "Trường Sa",
           "lat": 8.64,
           "lon": 111.92,
-          "w_ms": 2.5,
-          "dir_deg": 345.0
+          "w_ms": 2.4,
+          "dir_deg": 266.0
         },
         {
           "name": "Côn Đảo",
           "lat": 8.68,
           "lon": 106.6,
-          "w_ms": 4.4,
-          "dir_deg": 238.0
+          "w_ms": 4.5,
+          "dir_deg": 241.0
         },
         {
           "name": "Hải Phòng",
           "lat": 20.85,
           "lon": 106.68,
-          "w_ms": 4.4,
-          "dir_deg": 224.0
+          "w_ms": 3.3,
+          "dir_deg": 236.0
         },
         {
           "name": "TP. Hồ Chí Minh",
           "lat": 10.77,
           "lon": 106.7,
+          "w_ms": 2.1,
+          "dir_deg": 252.0
+        }
+      ]
+    },
+    {
+      "lead_h": 30,
+      "label_vn": "28/11 01:00 (VN)",
+      "label_utc": "27 Nov 18:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_30h.png",
+      "velocity_json": "data/velocity_30h.json",
+      "max_wind_ms": 8.1,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.4,
+          "dir_deg": 246.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 6.5,
+          "dir_deg": 247.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.2,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 4.1,
+          "dir_deg": 235.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 2.1,
+          "dir_deg": 265.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
           "w_ms": 4.3,
-          "dir_deg": 228.0
+          "dir_deg": 242.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 3.5,
+          "dir_deg": 235.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.2,
+          "dir_deg": 253.0
+        }
+      ]
+    },
+    {
+      "lead_h": 33,
+      "label_vn": "28/11 04:00 (VN)",
+      "label_utc": "27 Nov 21:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_33h.png",
+      "velocity_json": "data/velocity_33h.json",
+      "max_wind_ms": 8.1,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.5,
+          "dir_deg": 247.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 6.2,
+          "dir_deg": 247.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.3,
+          "dir_deg": 252.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 3.9,
+          "dir_deg": 235.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 2.0,
+          "dir_deg": 263.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 4.2,
+          "dir_deg": 244.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 3.7,
+          "dir_deg": 234.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.2,
+          "dir_deg": 254.0
+        }
+      ]
+    },
+    {
+      "lead_h": 36,
+      "label_vn": "28/11 07:00 (VN)",
+      "label_utc": "28 Nov 00:00 UTC",
+      "is_anchor": true,
+      "heatmap_png": "data/wind_36h.png",
+      "velocity_json": "data/velocity_36h.json",
+      "max_wind_ms": 8.2,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.5,
+          "dir_deg": 247.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 6.0,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.3,
+          "dir_deg": 254.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 3.7,
+          "dir_deg": 236.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 1.9,
+          "dir_deg": 261.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 4.0,
+          "dir_deg": 245.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 3.8,
+          "dir_deg": 233.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.3,
+          "dir_deg": 255.0
+        }
+      ]
+    },
+    {
+      "lead_h": 39,
+      "label_vn": "28/11 10:00 (VN)",
+      "label_utc": "28 Nov 03:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_39h.png",
+      "velocity_json": "data/velocity_39h.json",
+      "max_wind_ms": 8.2,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.6,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 5.8,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.3,
+          "dir_deg": 256.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 3.6,
+          "dir_deg": 236.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 1.8,
+          "dir_deg": 259.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 3.9,
+          "dir_deg": 246.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 3.9,
+          "dir_deg": 233.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.3,
+          "dir_deg": 255.0
+        }
+      ]
+    },
+    {
+      "lead_h": 42,
+      "label_vn": "28/11 13:00 (VN)",
+      "label_utc": "28 Nov 06:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_42h.png",
+      "velocity_json": "data/velocity_42h.json",
+      "max_wind_ms": 8.2,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.6,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 5.7,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.3,
+          "dir_deg": 257.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 3.4,
+          "dir_deg": 237.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 1.8,
+          "dir_deg": 257.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 3.9,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 4.0,
+          "dir_deg": 232.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.3,
+          "dir_deg": 254.0
+        }
+      ]
+    },
+    {
+      "lead_h": 45,
+      "label_vn": "28/11 16:00 (VN)",
+      "label_utc": "28 Nov 09:00 UTC",
+      "is_anchor": false,
+      "heatmap_png": "data/wind_45h.png",
+      "velocity_json": "data/velocity_45h.json",
+      "max_wind_ms": 8.2,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.6,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 5.6,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.2,
+          "dir_deg": 258.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 3.4,
+          "dir_deg": 237.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 1.8,
+          "dir_deg": 255.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 3.8,
+          "dir_deg": 249.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 4.0,
+          "dir_deg": 231.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.3,
+          "dir_deg": 254.0
+        }
+      ]
+    },
+    {
+      "lead_h": 48,
+      "label_vn": "28/11 19:00 (VN)",
+      "label_utc": "28 Nov 12:00 UTC",
+      "is_anchor": true,
+      "heatmap_png": "data/wind_48h.png",
+      "velocity_json": "data/velocity_48h.json",
+      "max_wind_ms": 8.2,
+      "stations": [
+        {
+          "name": "Bạch Long Vĩ",
+          "lat": 20.13,
+          "lon": 107.72,
+          "w_ms": 4.6,
+          "dir_deg": 248.0
+        },
+        {
+          "name": "Hoàng Sa",
+          "lat": 16.53,
+          "lon": 111.62,
+          "w_ms": 5.5,
+          "dir_deg": 247.0
+        },
+        {
+          "name": "Đà Nẵng",
+          "lat": 16.07,
+          "lon": 108.22,
+          "w_ms": 3.2,
+          "dir_deg": 259.0
+        },
+        {
+          "name": "Phú Quý",
+          "lat": 10.52,
+          "lon": 108.93,
+          "w_ms": 3.3,
+          "dir_deg": 238.0
+        },
+        {
+          "name": "Trường Sa",
+          "lat": 8.64,
+          "lon": 111.92,
+          "w_ms": 1.8,
+          "dir_deg": 254.0
+        },
+        {
+          "name": "Côn Đảo",
+          "lat": 8.68,
+          "lon": 106.6,
+          "w_ms": 3.8,
+          "dir_deg": 250.0
+        },
+        {
+          "name": "Hải Phòng",
+          "lat": 20.85,
+          "lon": 106.68,
+          "w_ms": 4.1,
+          "dir_deg": 231.0
+        },
+        {
+          "name": "TP. Hồ Chí Minh",
+          "lat": 10.77,
+          "lon": 106.7,
+          "w_ms": 2.2,
+          "dir_deg": 254.0
         }
       ]
     }
